@@ -9,3 +9,6 @@ swapoff
 
 Просмотр проблем по серверу 
 sar -r all -S -s 'время'
+
+# отображает изменение в data каждую секунду, можно отслеживать динамику
+watch -n 1 "date '+%d-%m-%Y_%H:%M:%S'; df -h | grep -E 'Filesystem|data'; df | grep -E 'Filesystem|data'"
